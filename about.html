@@ -26,14 +26,18 @@
     </nav>
 
     <h1>This is the about page</h1>
-
-<input type="button" value="submit" onclick="doIt()"
-
+<input type="text" id="t">
+<input type="button" value="Click1" onclick="doSomething()">
+<br>
+<input type="button" value="Click2" onclick="showMe()">
 
 </body>
 <script>
-    function doIt() {
-        alert("Hello my friends");
+    function doSomething(){
+        t.value="Hello";
+    }
+    function showMe(){
+        alert(t.value);
     }
 </script>
 

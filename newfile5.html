@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week three html</title>
+</head>
+
+<body>
+    <li>
+        <a href="about.html">About Us</a>
+    </li>
+
+Number: <input type="text" id="num1">
+Second Number: <input type="text" id="num2">
+<input type="button" value="+" onclick="addition()">
+<input type="button" value="-" onclick="subtract()">
+<input type="button" value=":" onclick="divide()">
+<input type="button" value="x" onclick="multiply()">
+<br>
+Results: <input type="text" id="num3">
+
+</body>
+<script>
+       function maths(operator){
+        //assigning vars as let, notice "value",same as input attr on html
+        let a= num1.value;
+        let b= num2.value;
+        
+        if (a==""){
+            alert("First number is missing")
+            num1.focus()
+        }else{
+            if(b==""){ //checks if second number is missing notice this is like elif/else if
+                alert("Second number is missing")
+                num2.focus()
+            }else{ //checks the input and does the math on them
+                let c=0
+                    if(operator=="+"){
+                        c=parseInt(a)+parseInt(b); 
+                    }
+                    if(operator=="-"){
+                        c=parseInt(a)-parseInt(b); 
+                    }
+                    if(operator==":"){
+                        c=parseInt(a)/parseInt(b)
+                    }
+                    if(operator=="x"){
+                        c=parseInt(a)*parseInt(b)
+                    }
+
+  
+                num3.value=c
+            }
+        }
+    }
+//subs
+</script>
+</html>
